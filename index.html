@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAYVON | Premium Streetwear & Fashion</title>
+    <title>RAYVON | Premium Clothing</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Header / Navbar -->
     <header class="navbar">
         <div class="logo">RAYVON</div>
         <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#shop">Shop</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
+            <a href="#order">Order Now</a>
         </nav>
         <div class="cart-btn" onclick="toggleCart()">
             Cart (<span id="cart-count">0</span>)
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>REDEFINE YOUR STREETWEAR</h1>
@@ -29,6 +30,7 @@
         </div>
     </section>
 
+    <!-- Products Section -->
     <section id="shop" class="products">
         <h2>Featured Collection</h2>
         <div class="product-grid">
@@ -60,23 +62,37 @@
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>About RAYVON</h2>
-        <p>At RAYVON, we fuse street culture with high-end minimal aesthetics. Every piece is crafted with precision, premium fabrics, and an eye for perfection.</p>
+    <!-- Checkout / Order Form Section -->
+    <section id="order" class="order-section">
+        <h2>Place Your Order</h2>
+        <form class="order-form" onsubmit="handleOrder(event)">
+            <label>আপনার নাম:</label>
+            <input type="text" id="cust-name" placeholder="আপনার পূর্ণ নাম লিখুন" required>
+
+            <label>মোবাইল নম্বর:</label>
+            <input type="tel" id="cust-phone" placeholder="017XXXXXXXX" required>
+
+            <label>ডেলিভারি ঠিকানা:</label>
+            <textarea id="cust-address" placeholder="বাসা নম্বর, রোড, এলাকা, জেলা" required></textarea>
+
+            <label>পেমেন্ট মেথড:</label>
+            <select id="payment-method" onchange="togglePaymentInfo()">
+                <option value="cod">Cash on Delivery (ক্যাশ অন ডেলিভারি)</option>
+                <option value="bkash">bKash (বিকাশ সেন্ড মানি)</option>
+            </select>
+
+            <div id="bkash-info" class="bkash-box" style="display: none;">
+                <p><strong>bKash Personal Number:</strong> 01700000000</p>
+                <p>টাকা সেন্ড মানি করে নিচে Transaction ID দিন:</p>
+                <input type="text" id="trx-id" placeholder="bKash TrxID (যেমন: 9J7A8D...)" >
+            </div>
+
+            <button type="submit" class="btn-submit">অর্ডার কনফার্ম করুন</button>
+        </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div>
-                <h3>RAYVON</h3>
-                <p>Elevating fashion standards since 2026.</p>
-            </div>
-            <div>
-                <h4>Customer Care</h4>
-                <p>Email: support@rayvon.com</p>
-                <p>Phone: +880 1700-000000</p>
-            </div>
-        </div>
         <div class="copyright">
             &copy; 2026 RAYVON. All Rights Reserved.
         </div>
