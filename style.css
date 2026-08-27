@@ -162,23 +162,63 @@ body {
     color: #000;
 }
 
-/* About Section */
-.about {
-    padding: 80px 8%;
+/* Order Section */
+.order-section {
+    padding: 60px 8%;
     background-color: #111;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+.order-section h2 {
     text-align: center;
+    margin-bottom: 25px;
 }
 
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.about p {
-    max-width: 700px;
-    margin: 0 auto;
-    color: #aaa;
-    font-size: 16px;
+.order-form label {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.order-form input, .order-form textarea, .order-form select {
+    padding: 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+}
+
+.bkash-box {
+    background: #e2136e22;
+    border: 1px solid #e2136e;
+    padding: 15px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn-submit {
+    padding: 14px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #ddd;
 }
 
 /* Footer */
